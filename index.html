@@ -283,11 +283,9 @@ button:active {
     </p>
   </div>
 <button id="next">Comenzar nuestra historia</button>
-<audio id="background-music" loop>
-  <source src="perfect.mp3" type="audio/mpeg">
-</audio>
+<audio id="background-music" loop></audio>
 <div id="music-label">♫ Perfect — Ed Sheeran</div>
-<button id="music-control">⏸ Pausar música</button>
+<button id="music-control">♫ Escuchar Perfect ❤️</button>
 </main>
 
 <script>
@@ -295,16 +293,12 @@ const title = document.getElementById("title");
 const message = document.getElementById("message");
 const button = document.getElementById("next");
 const musicControl = document.getElementById("music-control");
-const backgroundMusic = document.getElementById("background-music");
 
 musicControl.addEventListener("click", () => {
-  if (backgroundMusic.paused) {
-    backgroundMusic.play();
-    musicControl.textContent = "⏸ Pausar música";
-  } else {
-    backgroundMusic.pause();
-    musicControl.textContent = "▶ Reanudar música";
-  }
+  window.open(
+    "https://music.youtube.com/search?q=Perfect+Ed+Sheeran",
+    "_blank"
+  );
 });
 
 const scenes = [
